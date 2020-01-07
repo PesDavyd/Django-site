@@ -1,0 +1,9 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block content %}
+    <div class="offset-2">
+        <h2 class="text-info">{{news.Title}}</h2>
+        <p>{{news.Post|safe|linebreaks}}</p>
+        <h6>Опубликовано {{news.date| date:"d-m-Y В H:m:s"}}</h6>
+    </div>
+{% endblock %}

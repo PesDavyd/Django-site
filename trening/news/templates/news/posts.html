@@ -1,0 +1,25 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block content %}
+    <div class="" align="Center">
+        <h1>Новости</h1>
+    </div>
+    {% for post in object_list %}
+        <div class="conteiner">
+            <div class="alert alert-primary col-6 offset-1 my-3">
+            <div class="col-10 row">
+                <div class="col-7">
+                        <a href="/news/{{post.id}}" style="color: rgb(120, 42, 124);">
+                            <h3>{{post.Title}}</h3>
+                        </a>
+                    </div>
+                    <div class="col-8">
+                        <h3>{{post.date|date:"d-m-Y"}}</h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endfor %}
+{% endblock %}
+
+<!-- mx-5 my-3 px-md-5 my-md-2 py-md-1 row -->

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>My Blog</title>
+        {% load static %}
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" type="text/css">
+        <style>
+          h5 { text-indent: 25px;}
+        </style>
+    </head>
+
+    <body style="background-color: lightgrey;">
+        <div class="navbar navbar-dark bg-dark shadow-sm">
+            <div class="container d-fl  ex justify-content-between">
+              <a class="navbar-brand d-flex align-items-center" href="/profile/">
+                <svg xmlns="http://www.w3.org/2000/svg" class="mr-2"
+                aria-hidden="true" fill="none" stroke="currentColor" stroke-linecap="round"
+                stroke-linejoin="round" stroke-width="2" viewBox="0 0 24 24"
+                focusable="false" width="20" height="20">
+                  <path d="M 23 19 a 2 2 0 0 1 -2 2 H 3 a 2 2 0 0 1 -2 -2 V 8 a 2 2 0 0 1 2 -2 h 4 l 2 -3 h 6 l 2 3 h 4 a 2 2 0 0 1 2 2 Z">
+                  <circle cx="12" cy="13" r="4">
+                </svg>
+                <strong>By Pes_Davyd</strong>
+              </a>
+                <div class="d-flex flex-column flex-md-row align-items-center p-3 mb-1 bg-rgb(52, 58, 64)  ">
+                  <h5 class="" style="background-color: rgb(52, 58, 64);"></h5>
+                  <nav class="">
+                    <a href="/" class="btn btn-info btn-lg" style="background-color: rgb(52, 58, 64);">Главная страница</a>
+                    <a href="/contacts/" class="btn btn-info btn-lg" style="background-color: rgb(52, 58, 64);">Контакты</a>
+                    <a href="/news/" class="btn btn-info btn-lg " style="background-color: rgb(52, 58, 64);">Новости</a>
+                  </nav>
+                  <a href="/docs/" class="btn btn-info btn-lg mx-4" style="background-color: rgb(52, 58, 64); ">
+                    Документация
+                  </a>
+                  <a href="/auth/" class="btn btn-info btn-lg" style="background-color: rgb(52, 58, 64);">
+                    Авторизация
+                  </a>
+                </div>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+        <div class="container">
+          <hr>
+          &copy; Все права защищены 2018
+        </div>
+    </body>
+</html>

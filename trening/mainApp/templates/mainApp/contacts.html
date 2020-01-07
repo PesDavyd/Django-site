@@ -1,0 +1,12 @@
+{% extends "mainApp/wrapper.html" %}
+
+{% block content %}
+    <h1 align="center">Контакты</h1>
+    <div class="offset-1">
+        <div class="alert alert-success col-4 offset-1 my-3">
+            {% for content in contact %}
+            <h5>{{content}}</h5>
+            {% endfor %}
+        </div>
+    </div>
+{% endblock %}
